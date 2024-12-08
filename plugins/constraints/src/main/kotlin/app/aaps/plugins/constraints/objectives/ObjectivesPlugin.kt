@@ -81,20 +81,20 @@ class ObjectivesPlugin @Inject constructor(
     }
 
     fun reset() {
-        for (objective in objectives) {
-            objective.startedOn = 0
-            objective.accomplishedOn = 0
-        }
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectives_bg_is_available_in_ns, false)
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectives_pump_status_is_available_in_ns, false)
-        sp.putInt(app.aaps.core.utils.R.string.key_ObjectivesmanualEnacts, 0)
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseprofileswitch, false)
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusedisconnect, false)
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusereconnect, false)
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusetemptarget, false)
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseactions, false)
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseloop, false)
-        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusescale, false)
+        //for (objective in objectives) {
+        //    objective.startedOn = 0
+        //    objective.accomplishedOn = 0
+        //}
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectives_bg_is_available_in_ns, true)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectives_pump_status_is_available_in_ns, true)
+        sp.putInt(app.aaps.core.utils.R.string.key_ObjectivesmanualEnacts, 1)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseprofileswitch, true)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusedisconnect, true)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusereconnect, true)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusetemptarget, true)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseactions, true)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveuseloop, true)
+        sp.putBoolean(app.aaps.core.utils.R.string.key_objectiveusescale, true)
     }
 
     fun allPriorAccomplished(position: Int): Boolean {
