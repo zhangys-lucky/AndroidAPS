@@ -217,8 +217,8 @@ class GraphData(
             // custom paint to make a dotted line
             it.setCustomPaint(Paint().also { paint ->
                 paint.style = Paint.Style.STROKE
-                paint.strokeWidth = 1f
-                paint.pathEffect = DashPathEffect(floatArrayOf(10f, 20f), 0f)
+                paint.strokeWidth = 2f
+                paint.pathEffect = DashPathEffect(floatArrayOf(10f, 15f), 0f)
                 paint.color = rh.gac(graph.context, app.aaps.core.ui.R.attr.dotLineColor)
             })
         })
