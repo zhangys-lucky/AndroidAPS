@@ -98,6 +98,7 @@ class ObjectivesPlugin @Inject constructor(
     }
 
     fun allPriorAccomplished(position: Int): Boolean {
+        return true;
         var accomplished = true
         for (i in 0 until position) {
             accomplished = accomplished && objectives[i].isAccomplished
@@ -121,38 +122,50 @@ class ObjectivesPlugin @Inject constructor(
     }
 
     override fun isClosedLoopAllowed(value: Constraint<Boolean>): Constraint<Boolean> {
+        /*
         if (!objectives[MAXIOB_ZERO_CL_OBJECTIVE].isStarted)
             value.set(false, rh.gs(R.string.objectivenotstarted, MAXIOB_ZERO_CL_OBJECTIVE + 1), this)
+        */
         return value
     }
 
     override fun isAutosensModeEnabled(value: Constraint<Boolean>): Constraint<Boolean> {
+        /*
         if (!objectives[AUTOSENS_OBJECTIVE].isStarted)
             value.set(false, rh.gs(R.string.objectivenotstarted, AUTOSENS_OBJECTIVE + 1), this)
+        */
         return value
     }
 
     override fun isSMBModeEnabled(value: Constraint<Boolean>): Constraint<Boolean> {
+        /*
         if (!objectives[SMB_OBJECTIVE].isStarted)
             value.set(false, rh.gs(R.string.objectivenotstarted, SMB_OBJECTIVE + 1), this)
+        */
         return value
     }
 
     override fun isDynIsfModeEnabled(value: Constraint<Boolean>): Constraint<Boolean> {
+        /*
         if (!objectives[DYN_ISF_OBJECTIVE].isStarted)
             value.set(false, rh.gs(R.string.objectivenotstarted, DYN_ISF_OBJECTIVE + 1), this)
+        */
         return value
     }
 
     override fun applyMaxIOBConstraints(maxIob: Constraint<Double>): Constraint<Double> {
+        /*
         if (objectives[MAXIOB_ZERO_CL_OBJECTIVE].isStarted && !objectives[MAXIOB_ZERO_CL_OBJECTIVE].isAccomplished)
             maxIob.set(0.0, rh.gs(R.string.objectivenotfinished, MAXIOB_ZERO_CL_OBJECTIVE + 1), this)
+        */
         return maxIob
     }
 
     override fun isAutomationEnabled(value: Constraint<Boolean>): Constraint<Boolean> {
+        /*
         if (!objectives[AUTO_OBJECTIVE].isStarted)
             value.set(false, rh.gs(R.string.objectivenotstarted, AUTO_OBJECTIVE + 1), this)
+        */
         return value
     }
 
